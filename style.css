@@ -1,0 +1,41 @@
+* * {
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    border: 1px dashed red; 
+    text-decoration: none;
+}
+
+#wrapper {
+    margin: 0px auto;
+    max-width: 175px;
+}
+
+#content {
+    margin-top: 25%;
+    text-align: center;
+    border-bottom: 3px solid black;
+}
+
+p:first-child {
+    font-size: 3em;
+    border-bottom: 3px solid black;
+}
+
+a {
+    color: black;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    transition: 0.3s;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+a:hover {
+    background-color: rgba(50,50,50,0.15);
+}
+
+#footer {
+    font-size: 0.75em;
+}
