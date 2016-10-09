@@ -8,7 +8,7 @@
 
 #wrapper {
     margin: 0px auto;
-    max-width: 175px;
+    max-width: 250px;
 }
 
 #content {
@@ -30,10 +30,20 @@ a {
     transition: 0.3s;
     letter-spacing: 1px;
     font-weight: bold;
+    text-align: left;
 }
 
 a:hover {
     background-color: rgba(50,50,50,0.15);
+}
+
+.subheading {
+    font-weight: normal;
+}
+
+.desc {
+    font-size: 0.7em;
+    font-weight: normal;
 }
 
 #footer {
