@@ -69,7 +69,10 @@ hr.star-primary:after {
 }
 header {
   text-align: center;
-  background: #18BC9C;
+  background-image: url("../img/portrait.jpg");
+  background-size:cover;
+  background-position: center top;
+  background-repeat: no-repeat;
   color: white;
 }
 header .container {
@@ -78,7 +81,7 @@ header .container {
 }
 header img {
   display: block;
-  margin: 0 auto 20px;
+  min-height: 256px;
 }
 header .intro-text .name {
   display: block;
