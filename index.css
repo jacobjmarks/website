@@ -1,0 +1,105 @@
+* {
+  /*border: 1px dashed red;*/
+}
+
+/* NAVIGATION BAR ---------------------------- */
+
+.navbar-custom {
+  background-color: #333333;
+}
+.navbar-brand {
+  color: white;
+  font-weight: bold;
+}
+.navbar-nav a {
+  color: white;
+}
+.navbar-nav a:hover {
+  color: black;
+}
+@media (min-width: 768px) {
+  .navbar-nav a {
+    font-size: 1em;
+  }
+  .navbar-nav a:hover {
+    color: black;
+  }
+}
+
+/* NAVIGATION BAR CONTENT -------------------- */
+
+.navbar button {
+  color: white;
+  border-color: white;
+}
+.navbar .icon-bar {
+  background-color: white;
+}
+
+/* HEADER ------------------------------------ */
+
+#header {
+  padding-top: 50px;
+  background-image: url("img/background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+}
+#header div {
+  margin: 50px auto;
+}
+#header img {
+  margin: 0px auto;
+  margin-bottom: 20px;
+  max-height: 256px;
+}
+#header .text-center {
+  margin: 0px;
+}
+#header h1 {
+  font-size: 8.5vw;
+  font-weight: 700;
+}
+#header h3 {
+  font-size: 3.15vw;
+  font-weight: 300;
+}
+@media (min-width: 768px) {
+  #header h1 {
+    font-size: 4.75em;
+  }
+  #header h3 {
+    font-size: 1.75em;
+  }
+}
+#header hr {
+  width: 100px;
+  margin: 10px auto;
+  border: 2px solid white;
+}
+
+/* CONTENT ----------------------------------- */
+
+body {
+  position: relative;
+}
+
+.content {
+  padding: 50px 0px;
+}
+.content h1 {
+  margin: 0px;
+  text-align: center;
+  font-weight: bold;
+}
+.content hr {
+  width: 100px;
+  margin: 10px auto;
+  border: 2px solid #333333;
+}
+#about {
+  height: 1000px;
+}
+#about p {
+  font-size: 1.5em;
+}

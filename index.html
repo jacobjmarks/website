@@ -5,104 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Jacob Marks</title>
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
-    <style>
-      * {
-        /*border: 1px dashed red;*/
-      }
-      .navbar-custom {
-        background-color: #333333;
-      }
-      .navbar-brand {
-        color: white;
-        font-weight: bold;
-      }
-      .navbar-nav a {
-        color: white;
-      }
-      .navbar-nav a:hover {
-        color: black;
-      }
-      @media (min-width: 768px) {
-        .navbar-nav a {
-          font-size: 1em;
-        }
-        .navbar-nav a:hover {
-          color: black;
-        }
-      }
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 
-      .navbar button {
-        color: white;
-        border-color: white;
-      }
-      .navbar .icon-bar {
-        background-color: white;
-      }
+    <script src="index.js"></script>
 
-      #header {
-        padding-top: 50px;
-        background-image: url("img/background.jpg");
-        background-size: cover;
-        background-repeat: no-repeat;
-        color: white;
-      }
-      #header div {
-        margin: 50px auto;
-      }
-      #header img {
-        margin: 0px auto;
-        margin-bottom: 20px;
-        max-height: 256px;
-      }
-      #header .text-center {
-        margin: 0px;
-      }
-      #header h1 {
-        font-size: 8.5vw;
-        font-weight: 700;
-      }
-      #header h3 {
-        font-size: 3.15vw;
-        font-weight: 300;
-      }
-      @media (min-width: 768px) {
-        #header h1 {
-          font-size: 4.75em;
-        }
-        #header h3 {
-          font-size: 1.75em;
-        }
-      }
-      #header hr {
-        width: 100px;
-        margin: 10px auto;
-        border: 2px solid white;
-      }
-
-      #content div {
-        padding: 50px 0px;
-      }
-      #content h1 {
-        margin: 0px;
-        text-align: center;
-        font-weight: bold;
-      }
-      #content hr {
-        width: 100px;
-        margin: 10px auto;
-        border: 2px solid #333333;
-      }
-      #about {
-
-      }
-      #about p {
-        font-size: 1.5em;
-      }
-    </style>
+    <title>Jacob Marks</title>
   </head>
 
   <body data-spy="scroll" data-target=".navbar" data-offset="50">
@@ -135,27 +46,22 @@
       </div>
     </div>
 
-    <div class="container" id="content">
-      <div id="about">
-        <h1>ABOUT</h1>
-        <hr>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque scelerisque, velit nec accumsan euismod, felis tellus rhoncus purus, ac lobortis justo orci nec risus. Pellentesque porttitor et odio a volutpat. Ut et venenatis nulla. Vestibulum auctor nunc purus, sit amet dapibus leo dictum at. Sed ut urna augue. Praesent turpis mi, semper a ultrices id, mattis ac dui. Morbi lobortis dapibus nisi, id placerat dolor blandit in. Donec sit amet ultrices neque, sed euismod orci.
-        </p>
-      </div>
-
-      <div id="portfolio">
-        <h1>PORTFOLIO</h1>
-        <hr>
-      </div>
-
-      <div id="contact">
-        <h1>CONTACT</h1>
-        <hr>
-      </div>
+    <div class="container content" id="about">
+      <h1>ABOUT</h1>
+      <hr>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque scelerisque, velit nec accumsan euismod, felis tellus rhoncus purus, ac lobortis justo orci nec risus. Pellentesque porttitor et odio a volutpat. Ut et venenatis nulla. Vestibulum auctor nunc purus, sit amet dapibus leo dictum at. Sed ut urna augue. Praesent turpis mi, semper a ultrices id, mattis ac dui. Morbi lobortis dapibus nisi, id placerat dolor blandit in. Donec sit amet ultrices neque, sed euismod orci.
+      </p>
     </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <div class="container content" id="portfolio">
+      <h1>PORTFOLIO</h1>
+      <hr>
+    </div>
+
+    <div class="container content" id="contact">
+      <h1>CONTACT</h1>
+      <hr>
+    </div>
   </body>
 </html>
