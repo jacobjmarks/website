@@ -1,8 +1,21 @@
+#under_dev  {
+  display: block;
+  text-align: center;
+  margin: 20px;
+}
+#temp_index {
+  display: block;
+  text-align: center;
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
 * * {
     margin: 0px;
     box-sizing: border-box;
     font-family: sans-serif;
-    /* border: 1px dashed red; */
+    /*border: 1px dashed red;*/
     text-decoration: none;
 }
 
@@ -12,7 +25,6 @@
 }
 
 #content {
-    margin-top: 25%;
     text-align: center;
     border-bottom: 3px solid black;
 }
