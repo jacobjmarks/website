@@ -11,9 +11,31 @@
 
     <style>
       * {
-        /*border: 1px dashed red;*/
+        border: 1px dashed red;
+      }
+      .navbar-custom {
+        background-color: #333333;
+      }
+      .navbar-brand {
+        color: white;
+        font-weight: bold;
+      }
+      .navbar-nav a {
+        color: white;
+      }
+      .navbar-nav a:hover {
+        color: black;
+      }
+      @media (min-width: 768px) {
+        .navbar-nav a {
+          font-size: 1em;
+        }
+        .navbar-nav a:hover {
+          color: black;
+        }
       }
       #header {
+        padding-top: 50px;
         background-image: url("img/background.jpg");
         background-size: cover;
         background-repeat: no-repeat;
@@ -30,6 +52,22 @@
       #header .text-center {
         margin: 0px;
       }
+      #header h1 {
+        font-size: 8.5vw;
+        font-weight: 700;
+      }
+      #header h3 {
+        font-size: 3.15vw;
+        font-weight: 300;
+      }
+      @media (min-width: 768px) {
+        #header h1 {
+          font-size: 4.75em;
+        }
+        #header h3 {
+          font-size: 1.75em;
+        }
+      }
       #header hr {
         width: 100px;
         margin: 10px auto;
@@ -39,19 +77,40 @@
   </head>
 
   <body data-spy="scroll" data-target=".navbar" data-offset="50">
+    <nav class="navbar navbar-fixed-top navbar-custom">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">JACOB MARKS</a>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#about">ABOUT</a></li>
+          <li><a href="#portfolio">PORTFOLIO</a></li>
+          <li><a href="#contact">CONTACT</a><li>
+        </ul>
+      </div>
+    </nav>
+
     <div class="container-fluid" id="header">
       <div class="container-fluid">
         <img class="img-responsive" src="img/portrait.png">
         <h1 class="text-center">JACOB MARKS</h1>
         <hr>
-        <h3 class="text-center">Computer Science Student - Queensland University of Technology</h1>
+        <h3 class="text-center">Computer Science - Queensland University of Technology</h1>
       </div>
     </div>
-    <nav class="navbar navbar-inverse" data-spy="affix" data-offset-top="200">
 
-    </nav>
     <div class="container">
-      <h1>Hello</h1>
+      <div id="about">
+
+      </div>
+
+      <div id="portfolio">
+
+      </div>
+
+      <div id="contact">
+
+      </div>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
