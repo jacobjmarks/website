@@ -11,7 +11,7 @@
 
     <style>
       * {
-        border: 1px dashed red;
+        /*border: 1px dashed red;*/
       }
       .navbar-custom {
         background-color: #333333;
@@ -34,6 +34,15 @@
           color: black;
         }
       }
+
+      .navbar button {
+        color: white;
+        border-color: white;
+      }
+      .navbar .icon-bar {
+        background-color: white;
+      }
+
       #header {
         padding-top: 50px;
         background-image: url("img/background.jpg");
@@ -73,6 +82,26 @@
         margin: 10px auto;
         border: 2px solid white;
       }
+
+      #content div {
+        padding: 50px 0px;
+      }
+      #content h1 {
+        margin: 0px;
+        text-align: center;
+        font-weight: bold;
+      }
+      #content hr {
+        width: 100px;
+        margin: 10px auto;
+        border: 2px solid #333333;
+      }
+      #about {
+
+      }
+      #about p {
+        font-size: 1.5em;
+      }
     </style>
   </head>
 
@@ -81,12 +110,19 @@
       <div class="container">
         <div class="navbar-header">
           <a class="navbar-brand" href="#">JACOB MARKS</a>
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
         </div>
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="#about">ABOUT</a></li>
-          <li><a href="#portfolio">PORTFOLIO</a></li>
-          <li><a href="#contact">CONTACT</a><li>
-        </ul>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#about" onclick="$('.navbar-collapse').collapse('hide');">ABOUT</a></li>
+            <li><a href="#portfolio">PORTFOLIO</a></li>
+            <li><a href="#contact">CONTACT</a><li>
+          </ul>
+        </div>
       </div>
     </nav>
 
@@ -99,17 +135,23 @@
       </div>
     </div>
 
-    <div class="container">
+    <div class="container" id="content">
       <div id="about">
-
+        <h1>ABOUT</h1>
+        <hr>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque scelerisque, velit nec accumsan euismod, felis tellus rhoncus purus, ac lobortis justo orci nec risus. Pellentesque porttitor et odio a volutpat. Ut et venenatis nulla. Vestibulum auctor nunc purus, sit amet dapibus leo dictum at. Sed ut urna augue. Praesent turpis mi, semper a ultrices id, mattis ac dui. Morbi lobortis dapibus nisi, id placerat dolor blandit in. Donec sit amet ultrices neque, sed euismod orci.
+        </p>
       </div>
 
       <div id="portfolio">
-
+        <h1>PORTFOLIO</h1>
+        <hr>
       </div>
 
       <div id="contact">
-
+        <h1>CONTACT</h1>
+        <hr>
       </div>
     </div>
 
