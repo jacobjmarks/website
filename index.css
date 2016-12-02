@@ -1,10 +1,8 @@
 * {
-  /*border: 1px dashed red;*/
+  border: 1px dashed red;
 }
 
 /* NAVIGATION BAR ---------------------------- */
-
-
 
 /* HEADER ------------------------------------ */
 
@@ -67,9 +65,46 @@ body {
   margin: 10px auto;
   border: 2px solid #333333;
 }
-#about {
-  height: 1000px;
-}
+
 #about p {
+  margin: 0px;
   font-size: 1.5em;
+}
+
+/* TIMELINE ---------------------------------- */
+
+#timeline {
+  position: relative;
+}
+#timeline:before {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  border-left: 2px solid black;
+}
+#portfolio .timeline-badge {
+  background-color: #333333;
+  width: 60px;
+  height: 60px;
+  margin: 0px auto;
+  border-top-right-radius: 50%;
+  border-top-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+}
+#portfolio .timeline-badge h4 {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: 0px;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+}
+#portfolio .timeline-item .panel {
+  margin: 10px;
 }
