@@ -67,10 +67,18 @@ body {
   border: 2px solid #333333;
 }
 
+#about {
+  display: none;
+}
+
 #about p {
   max-width: 800px;
   margin: 0px auto;
   font-size: 1.5em;
+}
+
+#contact {
+  display: none;
 }
 
 /* TIMELINE ---------------------------------- */
@@ -129,6 +137,21 @@ body {
 }
 #timeline .panel-body {
   padding: 10px;
+}
+#timeline .panel-footer {
+  padding: 5px;
+  width: 100%;
+  height: 100%;
+}
+#timeline .panel-footer-text {
+  display: block;
+  text-align: center;
+}
+
+#timeline .panel-footer button {
+  display: block;
+  font-weight: bold;
+  margin: 0px auto;
 }
 
 #timeline .timeline-item-image {
