@@ -1,5 +1,5 @@
 * {
-  border: 1px dashed red;
+  border: 1px dashed red !important;
 }
 
 /* NAVIGATION BAR ---------------------------- */
@@ -73,28 +73,37 @@ body {
 
 /* TIMELINE ---------------------------------- */
 
+#portfolio  {
+  background-color: #AAAAAA;
+}
 #timeline {
+  z-index: 0;
   position: relative;
 }
-#timeline:before {
-  content: "";
+#timeline-line {
+  background-color: #333333;
+  width: 3.5px;
   display: block;
   position: absolute;
   z-index: -1;
-  top: 0;
-  bottom: 0;
+  top: 0px;
+  bottom: 0px;
   left: 50%;
-  border-left: 2px solid black;
+  transform: translateX(-2px);
+}
+#timeline-stop {
+  margin: 0px auto;
+  width: 15px;
+  height: 15px;
+  background-color: #333333;
+  border-radius: 50%;
 }
 #portfolio .timeline-badge {
   background-color: #333333;
   width: 60px;
   height: 60px;
   margin: 0px auto;
-  border-top-right-radius: 50%;
-  border-top-left-radius: 50%;
-  border-bottom-right-radius: 50%;
-  border-bottom-left-radius: 50%;
+  border-radius: 50%;
 }
 #portfolio .timeline-badge h4 {
   position: relative;
@@ -105,6 +114,48 @@ body {
   text-align: center;
   font-weight: bold;
 }
+#portfolio .timeline-item {
+  max-width: 50%;
+  position: relative;
+  display: block;
+}
+#portfolio .timeline-item:nth-of-type(odd) {
+  text-align: right;
+  left: 50%;
+  transform: translateX(-100%);
+}
+#portfolio .timeline-item:nth-of-type(even) {
+  left: 50%;
+}
 #portfolio .timeline-item .panel {
   margin: 10px;
+}
+
+#timeline .timeline-item-image {
+  width: 300px;
+  height: 169px;
+}
+
+#timeline .timeline-item-title {
+
+}
+
+#timeline .timeline-item-subtitle {
+
+}
+
+#timeline .timeline-item-body {
+
+}
+
+@media (max-width: 767px) {
+  #portfolio .timeline-item {
+    max-width: 100%;
+  }
+  #portfolio .timeline-item:nth-of-type(odd),
+  #portfolio .timeline-item:nth-of-type(even) {
+    text-align: left;
+    left: 0%;
+    transform: translateX(0%);
+  }
 }
