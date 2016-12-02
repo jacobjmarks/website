@@ -121,7 +121,7 @@ body {
   margin: 10px auto;
   max-width: 800px;
   position: relative;
-  display: flex;
+  display: block;
 }
 #timeline .panel {
   width: 100%;
@@ -144,7 +144,7 @@ body {
   margin: 0px;
   padding: 0px;
   font-weight: bold;
-  font-size: calc(1em + 1.5vw);
+  font-size: 2.25em;
 }
 
 #timeline .timeline-item-subtitle {
@@ -154,12 +154,20 @@ body {
 #timeline .timeline-item-body {
 }
 
+@media (max-width: 717px) {
+  #timeline .timeline-item-image {
+    max-width: 100%;
+    width: 100%;
+    margin: 0px;
+    margin-bottom: 10px;
+  }
+}
+
 @media (max-width: 767px) {
   #portfolio .timeline-item {
     max-width: 100%;
   }
-  #timeline .timeline-item-image {
-    margin: 0px;
-    margin-bottom: 10px;
+  #timeline .timeline-item-title {
+    font-size: calc(1em + 2vw);
   }
 }
