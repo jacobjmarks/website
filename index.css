@@ -148,7 +148,8 @@ body {
   text-align: center;
 }
 
-#timeline .panel-footer button {
+#timeline .panel-footer a {
+  width: 140px;
   display: block;
   font-weight: bold;
   margin: 0px auto;
