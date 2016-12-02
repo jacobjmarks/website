@@ -118,24 +118,13 @@ body {
   font-weight: bold;
 }
 #portfolio .timeline-item {
-  max-width: 50%;
+  margin: 10px auto;
+  max-width: 800px;
   position: relative;
   display: block;
 }
-#portfolio .timeline-item:nth-of-type(odd) {
-  float: left;
-  text-align: right;
-  left: 50%;
-  transform: translateX(-100%);
-}
-#portfolio .timeline-item:nth-of-type(even) {
-  float: right;
-}
-#portfolio .timeline-item:nth-of-type(2) {
-  margin-top: 60px;
-}
 #portfolio .timeline-item .panel {
-  margin: 10px;
+  margin: 0px;
   padding: 10px;
 }
 
@@ -159,14 +148,5 @@ body {
 @media (max-width: 767px) {
   #portfolio .timeline-item {
     max-width: 100%;
-  }
-  #portfolio .timeline-item:nth-of-type(odd),
-  #portfolio .timeline-item:nth-of-type(even) {
-    float: none;
-    clear: both;
-    margin: 0px auto;
-    text-align: left;
-    left: 0%;
-    transform: translateX(0%);
   }
 }
