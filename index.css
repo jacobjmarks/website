@@ -1,5 +1,6 @@
 * {
   /*border: 1px dashed red !important;*/
+  font-family: sans-serif;
 }
 
 /* NAVIGATION BAR ---------------------------- */
@@ -67,14 +68,15 @@ body {
 }
 
 #about p {
-  margin: 0px;
+  max-width: 800px;
+  margin: 0px auto;
   font-size: 1.5em;
 }
 
 /* TIMELINE ---------------------------------- */
 
 #portfolio  {
-  /*background-color: #AAAAAA;*/
+  /*background-color: #EEEEEE;*/
 }
 #timeline {
   z-index: 0;
@@ -99,16 +101,14 @@ body {
   background-color: #333333;
   border-radius: 50%;
 }
-#portfolio .timeline-badge {
-  position: relative;
-  clear: both;
+#timeline .timeline-badge {
   background-color: #333333;
   width: 60px;
   height: 60px;
   margin: 0px auto;
   border-radius: 50%;
 }
-#portfolio .timeline-badge h4 {
+#timeline .timeline-badge h4 {
   position: relative;
   top: 50%;
   transform: translateY(-50%);
@@ -117,29 +117,38 @@ body {
   text-align: center;
   font-weight: bold;
 }
-#portfolio .timeline-item {
+#timeline .timeline-item {
   margin: 10px auto;
   max-width: 800px;
   position: relative;
-  display: block;
+  display: flex;
 }
-#portfolio .timeline-item .panel {
+#timeline .panel {
+  width: 100%;
   margin: 0px;
+}
+#timeline .panel-body {
   padding: 10px;
 }
 
 #timeline .timeline-item-image {
-  width: 300px;
-  height: 169px;
+  border: 1px solid lightgrey;
+  float: left;
+  max-width: 300px;
   border-radius: 20px;
+  margin-right: 10px;
 }
 
 #timeline .timeline-item-title {
-  font-size: 2em;
+  display: inline-block;
+  margin: 0px;
+  padding: 0px;
   font-weight: bold;
+  font-size: calc(1em + 1.5vw);
 }
 
 #timeline .timeline-item-subtitle {
+  font-weight: bold;
 }
 
 #timeline .timeline-item-body {
@@ -148,5 +157,9 @@ body {
 @media (max-width: 767px) {
   #portfolio .timeline-item {
     max-width: 100%;
+  }
+  #timeline .timeline-item-image {
+    margin: 0px;
+    margin-bottom: 10px;
   }
 }
