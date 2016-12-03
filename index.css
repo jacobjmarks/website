@@ -68,14 +68,58 @@ body {
 }
 
 #about {
-  display: none;
+  padding-left: 75px;
+  padding-right: 75px;
 }
 
 #about p {
   max-width: 800px;
   margin: 0px auto;
   font-size: 1.5em;
+  text-align: justify;
 }
+
+@media (max-width: 767px) {
+  #about p {
+    font-size: 1.25em;
+  }
+}
+
+#about #social-buttons {
+  margin: 0px auto;
+  width: 265px;
+}
+
+#about .btn-social-icon {
+  display: inline-block;
+  margin: 10px 5px;
+  margin-bottom: 0px;
+  width: 75px;
+  height: 75px;
+  border-radius: 20%;
+  color: white;
+  transition: 0.25s;
+  padding: 0px;
+}
+
+#about .btn-social-icon i {
+  position: relative;
+  top: 50%;
+  transform: translateY(-55%);
+  margin: 0px auto;
+}
+
+#about .btn-social-icon:hover {
+  transition: 0.25s;
+  color:white;
+}
+
+#about .btn-facebook { background-color: #3b5998; }
+#about .btn-facebook:hover { background-color: #2d4373; }
+#about .btn-github { background-color: #444444; }
+#about .btn-github:hover { background-color:#2b2b2b; }
+#about .btn-linkedin { background-color: #007bb6; }
+#about .btn-linkedin:hover { background-color: #005983; }
 
 #contact {
   display: none;
@@ -176,6 +220,7 @@ body {
 }
 
 #timeline .timeline-item-body {
+  text-align: justify;
 }
 
 @media (max-width: 717px) {
