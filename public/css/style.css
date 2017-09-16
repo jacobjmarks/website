@@ -1,16 +1,38 @@
-body > :first-child {
+#banner {
     background-color: black;
 }
+    @media (min-width:767px) {
+        #banner > :first-child {        
+            min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+            min-height: 100vh; /* These two lines are counted as one :-)       */
+        
+            display: flex;
+            align-items: center;
+        }
+    }
+    #portraitgradient {
+        margin: 0px 15px;
+        position: absolute;
+        top: 0px;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+        background: -webkit-radial-gradient(transparent, black);
+        background: -o-radial-gradient(transparent, black);
+        background: -moz-radial-gradient(transparent, black);
+        background: radial-gradient(transparent 35%, black 75%);
+    }
 
-#portraitgradient {
-    margin: 0px 15px;
-    position: absolute;
-    top: 0px;
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
-    background: -webkit-radial-gradient(transparent, black);
-    background: -o-radial-gradient(transparent, black);
-    background: -moz-radial-gradient(transparent, black);
-    background: radial-gradient(transparent 35%, black 75%);
+.noselect {
+    pointer-events: none;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+        -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome and Opera */
 }
+
+.vertical-center {
+  }
