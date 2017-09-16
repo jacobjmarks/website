@@ -5,7 +5,7 @@ html
         script(src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous")
         script(src="/js/jquery.fittext.js")
         link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous")
-
+        script(src="https://use.fontawesome.com/1d0aebf98c.js")
         link(rel="stylesheet" href="/css/style.css")
         script(src="/js/scripts.js")
 
@@ -13,10 +13,26 @@ html
     body
         #banner.container-fluid.h-100
             .container.vertical-center
-                .row.align-items-center.text-white.noselect
-                    .col-md-6
+                .row.align-items-center.text-white
+                    .col-md-6.noselect
                         #portraitgradient
                         img#portrait.w-100(src="/img/2017_medium_plain.jpg")
                     .col-md-6
-                        h1#bannertitle.display-1 Jacob Marks
-                        p Queensland University of Technology
+                        h1#bannertitle.display-1.noselect Jacob Marks
+                        p.noselect Queensland University of Technology
+                        #socials.row.no-gutters
+                            .col
+                                a.btn-social(href="https://github.com/jacobjmarks")
+                                    i.fa.fa-fw.fa-lg.fa-github
+                            .col
+                                a.btn-social(href="https://www.linkedin.com/in/jacobjmarks/")
+                                    i.fa.fa-fw.fa-lg.fa-linkedin
+                            .col
+                                a.btn-social(href="mailto:jacobjmarks@outlook.com")
+                                    i.fa.fa-fw.fa-lg.fa-envelope-o
+                            .col
+                                a.btn-social(href="https://www.facebook.com/jacobjmarks96")
+                                    i.fa.fa-fw.fa-lg.fa-facebook
+                            .col
+                                a.btn-social(href="https://www.instagram.com/jacobjmarks/")
+                                    i.fa.fa-fw.fa-lg.fa-instagram

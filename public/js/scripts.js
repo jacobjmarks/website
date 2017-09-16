@@ -1,3 +1,3 @@
 window.onload = () => {
-    $("#bannertitle").fitText(0.8);
+    $("#bannertitle").fitText(0.7);
 };

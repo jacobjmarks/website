@@ -22,6 +22,19 @@
         background: -moz-radial-gradient(transparent, black);
         background: radial-gradient(transparent 35%, black 75%);
     }
+    .btn-social {
+        padding: 10px;
+        color: white;
+        transition: 0.3s;
+    }
+        .btn-social:hover {
+            color: grey;
+        }
+        @media (min-width: 767px) {
+            .btn-social:first-child {
+                margin-left: -10px;
+            }
+        }
 
 .noselect {
     pointer-events: none;
