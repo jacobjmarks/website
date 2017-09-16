@@ -1,0 +1,24 @@
+{
+  "name": "website",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jacobjmarks/website.git"
+  },
+  "author": "Jacob Marks <jacobjmarks@outlook.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jacobjmarks/website/issues"
+  },
+  "homepage": "https://github.com/jacobjmarks/website#readme",
+  "description": "",
+  "dependencies": {
+    "express": "^4.15.4",
+    "pug": "^2.0.0-rc.4"
+  }
+}
