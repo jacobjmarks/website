@@ -30,11 +30,6 @@
         .btn-social:hover {
             color: grey;
         }
-        @media (min-width: 767px) {
-            .btn-social:first-child {
-                margin-left: -10px;
-            }
-        }
 
 .noselect {
     pointer-events: none;
@@ -46,6 +41,3 @@
             user-select: none; /* Non-prefixed version, currently
                                     supported by Chrome and Opera */
 }
-
-.vertical-center {
-  }

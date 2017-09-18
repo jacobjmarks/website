@@ -16,9 +16,10 @@
     "url": "https://github.com/jacobjmarks/website/issues"
   },
   "homepage": "https://github.com/jacobjmarks/website#readme",
-  "description": "",
   "dependencies": {
     "express": "^4.15.4",
     "pug": "^2.0.0-rc.4"
-  }
+  },
+  "devDependencies": {},
+  "description": ""
 }
