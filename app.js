@@ -2,6 +2,8 @@ const express = require('express');
 
 const app = express();
 
+const database = require('./libs/database.js');
+
 const port = 3000;
 
 app.use(express.static("public"));
