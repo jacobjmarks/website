@@ -1,4 +1,5 @@
 #banner {
+    display: none;
     background-color: black;
 }
     @media (min-width:767px) {
