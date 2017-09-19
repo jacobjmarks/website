@@ -1,0 +1,9 @@
+.post.row
+    .col-12
+        h3 #{post.title}
+    .col-12
+        p.small 
+            | Posted in #{post.tags.join(', ')}
+            | on #{post.posted}
+    .col-12
+        p #{post.body}
