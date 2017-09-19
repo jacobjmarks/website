@@ -17,10 +17,7 @@ app.listen(port, () => {
     console.log(`Server listening on port ${port}`);
 });
 
-fs.rmdir('./public/js/pugtemplates-post.js', (err) => {
-
-});
-
+fs.rmdir('./public/js/pugtemplates-post.js', (_) => {});
 fs.writeFile(
     './public/js/pugtemplate-post.js',
     pug.compileFileClient('./views/post.pug', {name: 'pugtemplate-post'})
