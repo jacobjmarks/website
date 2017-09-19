@@ -26,7 +26,7 @@ module.exports.addPost = (post, callback) => {
     new Post({
         title: post.title,
         body: post.body,
-        tags: post.tags.split(' ')
+        tags: (post.tags) ? post.tags.split(' ') : undefined
     }).save((err, _) => {
         callback(err);
     });

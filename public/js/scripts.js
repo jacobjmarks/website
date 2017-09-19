@@ -6,7 +6,17 @@ window.onload = () => {
     getPosts();
 }
 
-function addPost() {    
+function addPost() {
+    let valid = true;
+    $.each($('#postform').serializeArray(), (i, param) => {
+        if (!param.value) {
+            valid = false;
+            return;
+        }
+    });
+
+    if (!valid) return;
+
     $.ajax({
         url: "/addPost",
         method: "POST",

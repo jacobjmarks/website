@@ -19,7 +19,8 @@ app.get('/', (req, res) => {
 app.post('/getPosts', (req, res) => {
     database.posts((err, posts) => {
         if (err) {
-            return res.statusCode(500).end();
+            console.error(err);
+            return res.status(500).end();
         }
         res.send(posts);
     })
@@ -28,7 +29,8 @@ app.post('/getPosts', (req, res) => {
 app.post('/addPost', (req, res) => {
     database.addPost(req.body, (err) => {
         if (err) {
-            return res.statusCode(500).end();
+            console.error(err);
+            return res.status(500).end();
         }
         res.end();
     });
