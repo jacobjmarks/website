@@ -1,4 +1,5 @@
 const express = require('express');
+const bodyParser = require('body-parser');
 const pug = require('pug');
 const fs = require('fs');
 
@@ -8,6 +9,8 @@ const app = express();
 const port = 3000;
 
 app.use(express.static("public"));
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 
 app.get('/', (req, res) => {
     res.render('index.pug');
@@ -20,6 +23,15 @@ app.post('/getPosts', (req, res) => {
         }
         res.send(posts);
     })
+});
+
+app.post('/addPost', (req, res) => {
+    database.addPost(req.body, (err) => {
+        if (err) {
+            return res.statusCode(500).end();
+        }
+        res.end();
+    });
 });
 
 app.listen(port, () => {

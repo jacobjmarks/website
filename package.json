@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/jacobjmarks/website#readme",
   "dependencies": {
+    "body-parser": "^1.18.1",
     "express": "^4.15.4",
     "mongoose": "^4.11.12",
     "pug": "^2.0.0-rc.4"

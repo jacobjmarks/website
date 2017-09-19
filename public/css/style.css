@@ -1,3 +1,15 @@
+#postformdiv form {
+    margin-bottom: 0;
+}
+
+#postformdiv button {
+    float: right;
+}
+
+.card-block {
+    padding: 0.75rem 1.25rem;
+}
+
 #banner {
     display: none;
     background-color: black;

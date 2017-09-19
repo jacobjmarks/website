@@ -23,7 +23,12 @@ module.exports.posts = (callback) => {
 }
 
 module.exports.addPost = (post, callback) => {
-    new Post(post).save((err, _) => {
+    new Post({
+        title: post.title,
+        body: post.body,
+        tags: post.tags,
+        posted: new Date()
+    }).save((err, _) => {
         callback(err);
     });
 }

@@ -8,13 +8,30 @@ html
         script(src="https://use.fontawesome.com/1d0aebf98c.js")
         link(rel="stylesheet" href="/css/style.css")
         script(src="/js/scripts.js")
+        script(src="/js/pugtemplate-post.js")
 
         meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
     body
         .container
             .row.justify-content-center
                 .col-8
-                    h2 Feed
+                    h1 Feed
+            #postformdiv.row.justify-content-center
+                .col-8
+                    .card
+                        .card-header Add Post
+                        .card-block
+                            form#postform(onsubmit="return false")
+                                .form-group
+                                    label(for="title") Title
+                                    input.form-control(name="title")
+                                .form-group
+                                    label(for="body") Body
+                                    input.form-control(name="body" type="text")
+                                .form-group
+                                    label(for="tags") Tags
+                                    input.form-control(name="tags" type="text")
+                                button.btn.btn-default(type="submit" onclick="addPost()") Submit
             .row.justify-content-center
                 #posts.col-8    
 
