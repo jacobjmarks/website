@@ -8,10 +8,10 @@ db.on('open', () => {
 });
 
 const postSchema = mongoose.Schema({
-    posted: Date,
-    title: String,
-    body: String,
-    tags: [String]
+    posted: {type: Date, required: true, default: Date.now},
+    title: {type: String, required: true},
+    body: {type: String, required: true},
+    tags: {type: [String], required: true}
 });
 
 const Post = mongoose.model('Post', postSchema);
@@ -26,8 +26,7 @@ module.exports.addPost = (post, callback) => {
     new Post({
         title: post.title,
         body: post.body,
-        tags: post.tags,
-        posted: new Date()
+        tags: post.tags.split(' ')
     }).save((err, _) => {
         callback(err);
     });
