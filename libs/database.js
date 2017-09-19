@@ -18,26 +18,24 @@ const Post = mongoose.model('Post', postSchema);
 
 module.exports.posts = (callback) => {
     Post.find((err, posts) => {
-        if (err) return console.error(err);
-        callback(posts);
+        callback(err, posts);
     });
 }
 
 module.exports.addPost = (post, callback) => {
     new Post(post).save((err, _) => {
-        if (err) return console.error(err);
-        callback();
+        callback(err);
     });
 }
 
 module.exports.deletePost = (post_id, callback) => {
     Post.findByIdAndRemove(post_id, (err, _) => {
-        if (err) console.error(err);
-    })
+        callback(err);
+    });
 }
 
-module.exports.truncate = () => {
+module.exports.truncate = (callback) => {
     Post.remove({}, (err) => {
-        if (err) return console.error(err);
+        callback(err);
     });
 }
