@@ -4,7 +4,8 @@
     .col-12.small
         .row
             .col-md.align-self-center
-                p(style="margin-bottom: 0;white-space: nowrap") #{date_posted}
+                p(style="margin-bottom: 0;white-space: nowrap")
+                    | Posted #{new Date(date_posted).toDateString()}
             .col-md.d-flex.justify-content-md-end
                 .tags.d-flex
                     each tag in tags

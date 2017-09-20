@@ -3,6 +3,7 @@ html
         title Jacob Marks
 
         script(src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous")
+        script(src="/js/parallax.js")
         script(src="/js/jquery.fittext.js")
         link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous")
         script(src="https://use.fontawesome.com/1d0aebf98c.js")
@@ -12,39 +13,51 @@ html
 
         meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
     body
+        #banner.container-fluid
+            #background-credit
+                .small Image by&nbsp;
+                    a(href="https://unsplash.com/@jonflobrant") Jon Flobrant
+            .container
+                .row.align-items-center.justify-content-center
+                    .col-md-auto
+                        img#portrait.img-fluid.img-thumbnail.align-self-end(src='/img/2017_medium_plain.jpg')
+                    .col-md-auto
+                        h1.fittext(style="white-space:nowrap") Jacob Marks
+                        p Queensland University of Technology
+
         .container
             .row.justify-content-center
-                .col-4
+                .col-md-4
                     h1 Feed
-                .col-4.align-self-center.d-flex.justify-content-end
+                .col-md-4.align-self-center.d-flex.justify-content-end
                     button.btn.btn-danger(onclick="truncatePosts()") TRUNCATE
             include includes/postform.pug
             .row.justify-content-center
-                #posts.col-8    
+                #posts.col-md-8    
 
 
-        #banner.container-fluid.h-100
-            .container.vertical-center
-                .row.align-items-center.text-white
-                    .col-md-6.noselect
-                        #portraitgradient
-                        img#portrait.w-100(src="/img/2017_medium_plain.jpg")
-                    .col-md-6.text-center
-                        h1#bannertitle.display-1.noselect Jacob Marks
-                        p.noselect Queensland University of Technology
-                        #socials.row.no-gutters
-                            .col.text-center
-                                a.btn-social(href="https://github.com/jacobjmarks" target="_blank")
-                                    i.fa.fa-fw.fa-lg.fa-github
-                            .col.text-center
-                                a.btn-social(href="https://www.linkedin.com/in/jacobjmarks/" target="_blank")
-                                    i.fa.fa-fw.fa-lg.fa-linkedin
-                            .col.text-center
-                                a.btn-social(href="mailto:jacobjmarks@outlook.com")
-                                    i.fa.fa-fw.fa-lg.fa-envelope-o
-                            .col.text-center
-                                a.btn-social(href="https://www.facebook.com/jacobjmarks96" target="_blank")
-                                    i.fa.fa-fw.fa-lg.fa-facebook
-                            .col.text-center
-                                a.btn-social(href="https://www.instagram.com/jacobjmarks/" target="_blank")
-                                    i.fa.fa-fw.fa-lg.fa-instagram
+        //- #banner.container-fluid.h-100
+        //-     .container.vertical-center
+        //-         .row.align-items-center.text-white
+        //-             .col-md-6.noselect
+        //-                 #portraitgradient
+        //-                 img#portrait.w-100(src="/img/2017_medium_plain.jpg")
+        //-             .col-md-6.text-center
+        //-                 h1#bannertitle.display-1.noselect Jacob Marks
+        //-                 p.noselect Queensland University of Technology
+        //-                 #socials.row.no-gutters
+        //-                     .col.text-center
+        //-                         a.btn-social(href="https://github.com/jacobjmarks" target="_blank")
+        //-                             i.fa.fa-fw.fa-lg.fa-github
+        //-                     .col.text-center
+        //-                         a.btn-social(href="https://www.linkedin.com/in/jacobjmarks/" target="_blank")
+        //-                             i.fa.fa-fw.fa-lg.fa-linkedin
+        //-                     .col.text-center
+        //-                         a.btn-social(href="mailto:jacobjmarks@outlook.com")
+        //-                             i.fa.fa-fw.fa-lg.fa-envelope-o
+        //-                     .col.text-center
+        //-                         a.btn-social(href="https://www.facebook.com/jacobjmarks96" target="_blank")
+        //-                             i.fa.fa-fw.fa-lg.fa-facebook
+        //-                     .col.text-center
+        //-                         a.btn-social(href="https://www.instagram.com/jacobjmarks/" target="_blank")
+        //-                             i.fa.fa-fw.fa-lg.fa-instagram

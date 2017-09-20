@@ -1,5 +1,5 @@
 $(document).ready(() => {
-    $("#bannertitle").fitText(0.7);
+    $(".fittext").fitText(0.7, { minFontSize: '25%', maxFontSize: '50%' });
 });
 
 window.onload = () => {

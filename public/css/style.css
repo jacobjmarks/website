@@ -1,3 +1,23 @@
+#banner {
+    position: relative;
+    background-image: url('../img/banner_bg_small.jpg');
+    background-position: 50% 0%;
+    background-repeat: no-repeat;
+    /* background-attachment: fixed; */
+}
+
+#background-credit {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+}
+
+#portrait {
+    border-radius: 50%;
+    max-height:250px;
+    margin: 20px 0px;
+}
+
 #postformdiv form {
     margin-bottom: 0;
 }
@@ -6,39 +26,27 @@
     padding: 0.75rem 1.25rem;
 }
 
-#banner {
-    display: none;
-    background-color: black;
+#portraitgradient {
+    margin: 0px 15px;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    background: -webkit-radial-gradient(transparent, black);
+    background: -o-radial-gradient(transparent, black);
+    background: -moz-radial-gradient(transparent, black);
+    background: radial-gradient(transparent 35%, black 75%);
 }
-    @media (min-width:767px) {
-        #banner > :first-child {        
-            min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
-            min-height: 100vh; /* These two lines are counted as one :-)       */
-        
-            display: flex;
-            align-items: center;
-        }
+
+.btn-social {
+    padding: 10px;
+    color: white;
+    transition: 0.3s;
+}
+    .btn-social:hover {
+        color: grey;
     }
-    #portraitgradient {
-        margin: 0px 15px;
-        position: absolute;
-        top: 0px;
-        bottom: 0px;
-        left: 0px;
-        right: 0px;
-        background: -webkit-radial-gradient(transparent, black);
-        background: -o-radial-gradient(transparent, black);
-        background: -moz-radial-gradient(transparent, black);
-        background: radial-gradient(transparent 35%, black 75%);
-    }
-    .btn-social {
-        padding: 10px;
-        color: white;
-        transition: 0.3s;
-    }
-        .btn-social:hover {
-            color: grey;
-        }
 
 .noselect {
     pointer-events: none;
