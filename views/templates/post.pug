@@ -1,10 +1,14 @@
 .post.row
     .col-12
         h3 #{title}
-    .col-12
-        p.small 
-            | Posted in #{tags.join(', ')}
-            | on #{date_posted}
+    .col-12.small
+        .row
+            .col-md.align-self-center
+                p(style="margin-bottom: 0;white-space: nowrap") #{date_posted}
+            .col-md.d-flex.justify-content-md-end
+                .tags.d-flex
+                    each tag in tags
+                        button.card(onclick=`postsByTag(${tag})`)= tag
     .col-12
         p #{body}
     .col-12.d-flex.justify-content-end

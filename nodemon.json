@@ -1,3 +1,4 @@
 {
-    "ignore": ["/public/js/pugtemplate-*"]
+    "ignore": ["/public/js/pugtemplate-*"],
+    "ext": "pug"
 }
