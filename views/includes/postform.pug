@@ -1,0 +1,17 @@
+#postformdiv.row.justify-content-center
+    .col-8
+        .card
+            .card-header Add Post
+            .card-block
+                form#postform(onsubmit="return false")
+                    .form-group
+                        label(for="title") Title
+                        input.form-control(name="title" required)
+                    .form-group
+                        label(for="body") Body
+                        input.form-control(name="body" type="text" required)
+                    .form-group
+                        label(for="tags") Tags
+                        input.form-control(name="tags" type="text" required)
+                    .d-flex.justify-content-end
+                        button.btn.btn-default(type="submit" onclick="addPost()") Submit

@@ -67,5 +67,5 @@ app.listen(port, () => {
 fs.rmdir('./public/js/pugtemplates-post.js', (_) => {});
 fs.writeFile(
     './public/js/pugtemplate-post.js',
-    pug.compileFileClient('./views/post.pug', {name: 'pugtemplate_post'})
+    pug.compileFileClient('./views/templates/post.pug', {name: 'pugtemplate_post'})
 );

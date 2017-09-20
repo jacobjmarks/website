@@ -23,6 +23,10 @@ function addPost() {
         data: $('#postform').serializeArray(),
         error: () => {},
         success: () => {
+            $.each($('#postform').find('input'), (i, input) => {
+                input.value = "";
+                input.blur();
+            });
             getPosts();
         },
         complete: () => {}
