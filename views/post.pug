@@ -7,3 +7,6 @@
             | on #{posted}
     .col-12
         p #{body}
+    .col-12.d-flex.justify-content-end
+        id(style="display: none") #{_id}
+        button.btn.btn-danger(onclick=`deletePost('${_id}')`) Delete

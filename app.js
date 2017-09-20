@@ -36,6 +36,15 @@ app.post('/addPost', (req, res) => {
     });
 });
 
+app.post('/deletePost/:id', (req, res) => {
+    database.deletePost(req.params.id, (err) => {
+        if (err) {
+            res.status(500).end();
+        }
+        res.end();
+    })
+});
+
 app.post('/truncatePosts', (req, res) => {
     database.truncatePosts((err) => {
         if (err) {

@@ -29,6 +29,23 @@ function addPost() {
     });
 }
 
+function deletePost(id) {
+    if (!confirm("Are you sure?")) {
+        return;
+    }
+
+    $.ajax({
+        url: `/deletePost/${id}`,
+        method: "POST",
+        error: () => {},
+        success: () => {
+            $('.post').find(`id:contains(${id})`)
+            .parent().parent().remove();
+        },
+        complete: () => {}
+    });
+}
+
 function getPosts() {
     $.ajax({
         url: "/getPosts",
