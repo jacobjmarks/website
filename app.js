@@ -13,10 +13,12 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 app.get('/', (req, res) => {
+    console.log("GET /");
     res.render('index.pug');
 });
 
 app.post('/getPosts', (req, res) => {
+    console.log("POST /getPosts");
     database.posts((err, posts) => {
         if (err) {
             console.error(err);
@@ -27,6 +29,7 @@ app.post('/getPosts', (req, res) => {
 });
 
 app.post('/addPost', (req, res) => {
+    console.log("POST /addPost");
     database.addPost(req.body, (err) => {
         if (err) {
             console.error(err.stack);
@@ -37,6 +40,7 @@ app.post('/addPost', (req, res) => {
 });
 
 app.post('/deletePost/:id', (req, res) => {
+    console.log(`POST /deletePost/${req.params.id}`)
     database.deletePost(req.params.id, (err) => {
         if (err) {
             res.status(500).end();
@@ -46,6 +50,7 @@ app.post('/deletePost/:id', (req, res) => {
 });
 
 app.post('/truncatePosts', (req, res) => {
+    console.log("POST /truncatePosts");
     database.truncatePosts((err) => {
         if (err) {
             console.error(err);

@@ -8,7 +8,7 @@ db.on('open', () => {
 });
 
 const postSchema = mongoose.Schema({
-    posted: {type: Date, required: true, default: Date.now},
+    date_posted: {type: Date, required: true, default: Date.now},
     title: {type: String, required: true},
     body: {type: String, required: true},
     tags: {type: [String], required: true}
