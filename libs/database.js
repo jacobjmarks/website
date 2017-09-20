@@ -19,7 +19,7 @@ const Post = mongoose.model('Post', postSchema);
 module.exports.posts = (callback) => {
     Post.find((err, posts) => {
         callback(err, posts);
-    }).sort({ posted: -1 });
+    }).sort({ date_posted: -1 });
 }
 
 module.exports.addPost = (post, callback) => {
