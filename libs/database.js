@@ -19,7 +19,7 @@ const Post = mongoose.model('Post', postSchema);
 module.exports.posts = (callback) => {
     Post.find((err, posts) => {
         callback(err, posts);
-    });
+    }).sort({ posted: -1 });
 }
 
 module.exports.addPost = (post, callback) => {
@@ -38,7 +38,7 @@ module.exports.deletePost = (post_id, callback) => {
     });
 }
 
-module.exports.truncate = (callback) => {
+module.exports.truncatePosts = (callback) => {
     Post.remove({}, (err) => {
         callback(err);
     });

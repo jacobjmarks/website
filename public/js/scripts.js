@@ -21,13 +21,11 @@ function addPost() {
         url: "/addPost",
         method: "POST",
         data: $('#postform').serializeArray(),
-        error: () => {
-        },
+        error: () => {},
         success: () => {
             getPosts();
         },
-        complete: () => {
-        }
+        complete: () => {}
     });
 }
 
@@ -35,16 +33,35 @@ function getPosts() {
     $.ajax({
         url: "/getPosts",
         method: "POST",
-        error: () => {
-        },
+        error: () => {},
         success: (posts) => {
-            $("#posts").empty();
+            clearPosts();
             let numPosts = posts.length;
             for (let i = 0; i < numPosts; i++) {
-                $("#posts").append(pugtemplate_post(posts[i]));
+                $("#posts").
+                append(pugtemplate_post(posts[i]));
             }
         },
-        complete: () => {
-        }
+        complete: () => {}
     });
+}
+
+function truncatePosts() {
+    if (!confirm("Are you sure?")) {
+        return;
+    }
+
+    $.ajax({
+        url: "/truncatePosts",
+        method: "POST",
+        error: () => {},
+        success: () => {
+            clearPosts();
+        },
+        complete: () => {}
+    });
+}
+
+function clearPosts() {
+    $("#posts").empty();
 }

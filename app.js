@@ -29,6 +29,16 @@ app.post('/getPosts', (req, res) => {
 app.post('/addPost', (req, res) => {
     database.addPost(req.body, (err) => {
         if (err) {
+            console.error(err.stack);
+            return res.status(500).end();
+        }
+        res.end();
+    });
+});
+
+app.post('/truncatePosts', (req, res) => {
+    database.truncatePosts((err) => {
+        if (err) {
             console.error(err);
             return res.status(500).end();
         }
